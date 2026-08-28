@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "matrix": "node scripts/generate-test-matrix.mjs",
+    "test:matrix": "npm test && npm run matrix",
+    "test": "playwright test",
+    "test:empresa": "playwright test tests/empresa",
+    "test:headed": "playwright test --project=chromium --headed"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
